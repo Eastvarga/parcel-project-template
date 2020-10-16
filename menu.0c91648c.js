@@ -117,83 +117,25 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
-
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
-  }
-
-  return bundleURL;
-}
-
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
-
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
-
-  return '/';
-}
-
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
-}
-
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"../node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
-
-function updateLink(link) {
-  var newLink = link.cloneNode();
-
-  newLink.onload = function () {
-    link.remove();
-  };
-
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-
-var cssTimeout = null;
-
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
-
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
-    }
-
-    cssTimeout = null;
-  }, 50);
-}
-
-module.exports = reloadCSS;
-},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"sass/main.scss":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"./..\\fonts\\dm-sans-v5-latin-regular.eot":[["dm-sans-v5-latin-regular.81b5c59d.eot","fonts/dm-sans-v5-latin-regular.eot"],"fonts/dm-sans-v5-latin-regular.eot"],"./..\\fonts\\dm-sans-v5-latin-regular.woff2":[["dm-sans-v5-latin-regular.8d44908d.woff2","fonts/dm-sans-v5-latin-regular.woff2"],"fonts/dm-sans-v5-latin-regular.woff2"],"./..\\fonts\\dm-sans-v5-latin-regular.woff":[["dm-sans-v5-latin-regular.e5cf4a87.woff","fonts/dm-sans-v5-latin-regular.woff"],"fonts/dm-sans-v5-latin-regular.woff"],"./..\\fonts\\dm-sans-v5-latin-regular.ttf":[["dm-sans-v5-latin-regular.30b0dfbe.ttf","fonts/dm-sans-v5-latin-regular.ttf"],"fonts/dm-sans-v5-latin-regular.ttf"],"./..\\fonts\\dm-sans-v5-latin-regular.svg":[["dm-sans-v5-latin-regular.ead03e5e.svg","fonts/dm-sans-v5-latin-regular.svg"],"fonts/dm-sans-v5-latin-regular.svg"],"./..\\fonts\\dm-sans-v5-latin-500.eot":[["dm-sans-v5-latin-500.96e54c25.eot","fonts/dm-sans-v5-latin-500.eot"],"fonts/dm-sans-v5-latin-500.eot"],"./..\\fonts\\dm-sans-v5-latin-500.woff2":[["dm-sans-v5-latin-500.9524903e.woff2","fonts/dm-sans-v5-latin-500.woff2"],"fonts/dm-sans-v5-latin-500.woff2"],"./..\\fonts\\dm-sans-v5-latin-500.woff":[["dm-sans-v5-latin-500.170a9973.woff","fonts/dm-sans-v5-latin-500.woff"],"fonts/dm-sans-v5-latin-500.woff"],"./..\\fonts\\dm-sans-v5-latin-500.ttf":[["dm-sans-v5-latin-500.bed1da24.ttf","fonts/dm-sans-v5-latin-500.ttf"],"fonts/dm-sans-v5-latin-500.ttf"],"./..\\fonts\\dm-sans-v5-latin-500.svg":[["dm-sans-v5-latin-500.29a15e3c.svg","fonts/dm-sans-v5-latin-500.svg"],"fonts/dm-sans-v5-latin-500.svg"],"./..\\fonts\\dm-sans-v5-latin-700.eot":[["dm-sans-v5-latin-700.450b51d9.eot","fonts/dm-sans-v5-latin-700.eot"],"fonts/dm-sans-v5-latin-700.eot"],"./..\\fonts\\dm-sans-v5-latin-700.woff2":[["dm-sans-v5-latin-700.69b1af9a.woff2","fonts/dm-sans-v5-latin-700.woff2"],"fonts/dm-sans-v5-latin-700.woff2"],"./..\\fonts\\dm-sans-v5-latin-700.woff":[["dm-sans-v5-latin-700.ae5018c5.woff","fonts/dm-sans-v5-latin-700.woff"],"fonts/dm-sans-v5-latin-700.woff"],"./..\\fonts\\dm-sans-v5-latin-700.ttf":[["dm-sans-v5-latin-700.e007fc9a.ttf","fonts/dm-sans-v5-latin-700.ttf"],"fonts/dm-sans-v5-latin-700.ttf"],"./..\\fonts\\dm-sans-v5-latin-700.svg":[["dm-sans-v5-latin-700.9bd9af8d.svg","fonts/dm-sans-v5-latin-700.svg"],"fonts/dm-sans-v5-latin-700.svg"],"./..\\fonts\\titan-one-v8-latin-regular.eot":[["titan-one-v8-latin-regular.5ecfba8a.eot","fonts/titan-one-v8-latin-regular.eot"],"fonts/titan-one-v8-latin-regular.eot"],"./..\\fonts\\titan-one-v8-latin-regular.woff2":[["titan-one-v8-latin-regular.c7773417.woff2","fonts/titan-one-v8-latin-regular.woff2"],"fonts/titan-one-v8-latin-regular.woff2"],"./..\\fonts\\titan-one-v8-latin-regular.woff":[["titan-one-v8-latin-regular.7f3e05d4.woff","fonts/titan-one-v8-latin-regular.woff"],"fonts/titan-one-v8-latin-regular.woff"],"./..\\fonts\\titan-one-v8-latin-regular.ttf":[["titan-one-v8-latin-regular.289eb43c.ttf","fonts/titan-one-v8-latin-regular.ttf"],"fonts/titan-one-v8-latin-regular.ttf"],"./..\\fonts\\titan-one-v8-latin-regular.svg":[["titan-one-v8-latin-regular.6dce54aa.svg","fonts/titan-one-v8-latin-regular.svg"],"fonts/titan-one-v8-latin-regular.svg"],"./..\\images\\mobile\\hero-ice-cream.png":[["hero-ice-cream.a8a6a05a.png","images/mobile/hero-ice-cream.png"],"images/mobile/hero-ice-cream.png"],"./..\\images\\mobile\\hero-ice-cream@2x.png":[["hero-ice-cream@2x.67b243f5.png","images/mobile/hero-ice-cream@2x.png"],"images/mobile/hero-ice-cream@2x.png"],"./..\\images\\tablet\\hero-ice-cream.png":[["hero-ice-cream.246b5e2c.png","images/tablet/hero-ice-cream.png"],"images/tablet/hero-ice-cream.png"],"./..\\images\\tablet\\hero-ice-cream@2x.png":[["hero-ice-cream@2x.41ad37df.png","images/tablet/hero-ice-cream@2x.png"],"images/tablet/hero-ice-cream@2x.png"],"./..\\images\\desktop\\hero-ice-cream.png":[["hero-ice-cream.b15fabcc.png","images/desktop/hero-ice-cream.png"],"images/desktop/hero-ice-cream.png"],"./..\\images\\desktop\\hero-ice-cream@2x.png":[["hero-ice-cream@2x.595d2002.png","images/desktop/hero-ice-cream@2x.png"],"images/desktop/hero-ice-cream@2x.png"],"./..\\images\\tablet\\hero-arrow-right.png":[["hero-arrow-right.e54744e3.png","images/tablet/hero-arrow-right.png"],"images/tablet/hero-arrow-right.png"],"./..\\images\\tablet\\hero-arrow-right@2x.png":[["hero-arrow-right@2x.e0680fc4.png","images/tablet/hero-arrow-right@2x.png"],"images/tablet/hero-arrow-right@2x.png"],"./..\\images\\desktop\\hero-arrow-right.png":[["hero-arrow-right.640a02f3.png","images/desktop/hero-arrow-right.png"],"images/desktop/hero-arrow-right.png"],"./..\\images\\desktop\\hero-arrow-right@2x.png":[["hero-arrow-right@2x.22973a22.png","images/desktop/hero-arrow-right@2x.png"],"images/desktop/hero-arrow-right@2x.png"],"./..\\images\\desktop-milk@1x.png":[["desktop-milk@1x.4c2d1329.png","images/desktop-milk@1x.png"],"images/desktop-milk@1x.png"],"./..\\images\\desktop-milk@2x.png":[["desktop-milk@2x.eace9d99.png","images/desktop-milk@2x.png"],"images/desktop-milk@2x.png"],"./..\\images\\red-arrow@1x.png":[["red-arrow@1x.98d821d3.png","images/red-arrow@1x.png"],"images/red-arrow@1x.png"],"./..\\images\\red-arrow@2x.png":[["red-arrow@2x.030bbe4a.png","images/red-arrow@2x.png"],"images/red-arrow@2x.png"],"./..\\images\\desktop\\bcgbranch2.png":[["bcgbranch2.befbd5e2.png","images/desktop/bcgbranch2.png"],"images/desktop/bcgbranch2.png"],"./..\\images\\desktop\\bcgbranch2@2x.png":[["bcgbranch2@2x.7ad949e2.png","images/desktop/bcgbranch2@2x.png"],"images/desktop/bcgbranch2@2x.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
-"use strict";
-
-require("./sass/main.scss");
-},{"./sass/main.scss":"sass/main.scss"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+})({"js/menu.js":[function(require,module,exports) {
+(function () {
+  var menuBtnRef = document.querySelector('[data-menu-button]');
+  var menuBtnCl = document.querySelector('[data-menu-button-close]');
+  var mobileMenuRef = document.querySelector('[data-menu]');
+  menuBtnRef.addEventListener('click', function () {
+    var expanded = menuBtnRef.getAttribute('aria-expanded') === 'true' || false;
+    menuBtnRef.classList.toggle('is-open');
+    menuBtnRef.setAttribute('aria-expanded', !expanded);
+    mobileMenuRef.classList.toggle('is-open');
+  });
+  menuBtnCl.addEventListener('click', function () {
+    var expanded = menuBtnRef.getAttribute('aria-expanded') === 'true' || false;
+    menuBtnRef.classList.toggle('is-open');
+    menuBtnRef.setAttribute('aria-expanded', !expanded);
+    mobileMenuRef.classList.toggle('is-open');
+  });
+})();
+},{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -397,5 +339,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
-//# sourceMappingURL=/src.e31bb0bc.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/menu.js"], null)
+//# sourceMappingURL=/menu.0c91648c.js.map
