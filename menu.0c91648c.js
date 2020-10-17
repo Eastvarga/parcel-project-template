@@ -129,9 +129,8 @@ parcelRequire = (function (modules, cache, entry, globalName) {
     mobileMenuRef.classList.toggle('is-open');
   });
   menuBtnCl.addEventListener('click', function () {
-    var expanded = menuBtnRef.getAttribute('aria-expanded') === 'true' || false;
-    menuBtnRef.classList.toggle('is-open');
-    menuBtnRef.setAttribute('aria-expanded', !expanded);
+    var expanded = menuBtnCl.getAttribute('aria-expanded') === 'false' || true;
+    menuBtnCl.setAttribute('aria-expanded', !expanded);
     mobileMenuRef.classList.toggle('is-open');
   });
 })();
@@ -163,7 +162,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56038" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49763" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
