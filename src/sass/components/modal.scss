@@ -1,5 +1,5 @@
 .backdrop {
- position: fixed;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -8,47 +8,50 @@
   opacity: 1;
   z-index: 9000;
   transition: opacity $animation-time $animation-function;
-    @media screen and ( max-width: 768px) {
-     padding: 94px 15px;
-     overflow-y: scroll;
-   }
-    @media screen and ( max-width: 1199px){
-      
-    }
- }
- .backdrop.is-hidden {
+  @media screen and (max-width: 768px) {
+    padding: 94px 15px;
+    overflow-y: scroll;
+  }
+  @media screen and (max-width: 1199px) {
+  }
+}
+.backdrop.is-hidden {
   opacity: 0;
-  pointer-events: none;}
+  pointer-events: none;
+}
 // & .modal {
 //    transform: translateX(-50%, -50%) scale(0);
 //  }
 // }
-  .modal {
-position: relative;
- width: 100%;   
-padding: 30px;
- z-index: 100;
+.modal {
+  position: relative;
+  width: 100%;
+  padding: 30px;
+  z-index: 100;
   border-radius: 14px;
-  background: $bg-color;  
-   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+  background: $bg-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-   @include for-size (tablet){
+  @include for-size(tablet) {
     position: absolute;
-  top: 50%;
- left: 50%;  transform: translate(-50%, -50%) scaleX(1);  
-  width: 65vw;
-    }
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scaleX(1);
+    width: 65vw;
+  }
 
- @include for-size (desktop){
-   max-width:528px;  height: auto;
-   }}
-    
+  @include for-size(desktop) {
+    max-width: 528px;
+    height: auto;
+  }
+}
+
 .bt-close {
   position: absolute;
   top: 8px;
   right: 8px;
-padding: 6px;
-display: flex;
+  padding: 6px;
+  display: flex;
   align-items: center;
   background: $white-color;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -56,29 +59,31 @@ display: flex;
   outline: none;
   text-align: center;
   transition: fill $animation-time $animation-function;
-  cursor: pointer;  &:hover,
+  cursor: pointer;
+  &:hover,
   &:focus {
     fill: $accent-purple-color;
-  }}
-  .form {
-   text-align: center;
- display: flex;
+  }
+}
+.form {
+  text-align: center;
+  display: flex;
   flex-direction: column;
   &__caption {
-  display: block;
-  margin-bottom: 10px;
-  font-family: "Titan One";
+    display: block;
+    margin-bottom: 10px;
+    font-family: 'Titan One';
     text-transform: uppercase;
-     @include font(500, 20px, 1.157, 0.04em);
+    @include font(500, 20px, 1.157, 0.04em);
     color: $accent-text-color;
-}
+  }
 
   &__title {
     text-align: center;
     margin-bottom: 10px;
     font-family: $accent-font;
     text-transform: uppercase;
-     @include font(500, 20px, 1.157, 0.04em);
+    @include font(500, 20px, 1.157, 0.04em);
     color: $accent-text-color;
   }
   &-field {
@@ -87,20 +92,22 @@ display: flex;
     border-radius: 4px;
     outline: none;
   }
-&__check-product {
-   position: relative;display: flex;
-  align-items: center;
-  margin-bottom: 10px;
- @include font(500, 16px, 1.8, 0.04em);}
-&__label {
+  &__check-product {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    @include font(500, 16px, 1.8, 0.04em);
+  }
+  &__label {
     display: flex;
     align-items: left;
-  margin-left: 4px;
+    margin-left: 4px;
     margin-bottom: 6px;
-     @include font(400, 16px, 1.2, 0.02em);
+    @include font(400, 16px, 1.2, 0.02em);
     color: $black-color;
   }
-&__input {
+  &__input {
     padding-left: 42px;
     width: 100%;
     height: 40px;
@@ -110,7 +117,7 @@ display: flex;
     transition: all $animation-time $animation-function;
     outline: none;
   }
-    &__textarea {
+  &__textarea {
     width: 100%;
     padding: 12px 16px;
     resize: none;
@@ -118,61 +125,62 @@ display: flex;
     border: 1px solid rgba(206, 129, 199, 0.2);
 
     border-radius: 4px;
-    transition: border-color $animation-time $animation-function ;
+    transition: border-color $animation-time $animation-function;
     outline: none;
   }
   &__textarea::placeholder {
-
-    color:$accent-text-color;
+    color: $accent-text-color;
   }
- &__icon {
+  &__icon {
     position: absolute;
     top: 54%;
     left: 12px;
     fill: $accent-text-color;
     transition: fill $animation-time $animation-function;
   }
-  &__link{   color:$purple-text-color;
-
+  &__link {
+    color: $purple-text-color;
   }
   &__input:focus ~ &__icon,
   &__input:focus,
   &__textarea:focus {
     border-color: $accent-purple-color;
     fill: $accent-purple-color;
-       }}
+  }
+}
 /* ------------Стиль для чек бокса------------ */
 .chek {
   display: inline-flex;
   text-align: center;
-  &:not(:last-child){
-  margin-bottom: 10px;}
-  font-family: "Titan One";
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  font-family: 'Titan One';
   color: $menu-bg;
-    @include for-size(desktop){
+  @include for-size(desktop) {
     justify-content: center;
-    }
+  }
   &__icon::before {
-  display: inline-flex;
-  text-align: center;
-  content: "";
- margin-right: 10px;
-  width: 16px;
-  height: 15px;
-   background-image: url(../images/icon-check.svg);
-   font-family: "Titan One";
-  fill:  $bg-color;
-  border: 2px solid $accent-text-color;
-  border-radius: 2px;
+    display: inline-flex;
+    text-align: center;
+    content: '';
+    margin-right: 10px;
+    width: 16px;
+    height: 15px;
+    background-image: url(../images/icon-check.svg);
+    font-family: 'Titan One';
+    fill: $bg-color;
+    border: 2px solid $accent-text-color;
+    border-radius: 2px;
 
-  cursor: pointer;
-  transition: all $animation-time $animation-function;}
+    cursor: pointer;
+    transition: all $animation-time $animation-function;
+  }
 }
- .agreement{
-     font-family: $base-font;
-     color:$black-color;
-
- }
+.agreement {
+  font-family: $base-font;
+  color: $black-color;
+}
 
 .checkbox {
   position: absolute;
@@ -182,17 +190,14 @@ display: flex;
   border: 0;
   padding: 0;
   clip: rect(0 0 0 0);
-   overflow: hidden;
+  overflow: hidden;
 }
 
-
-
 .checkbox:checked ~ .chek__icon::before {
- 
   border: 2px solid $hover-btn-one-color;
   border-radius: 2px;
   background-color: $hover-btn-one-color;
-background-image: url(../images/icon-check.svg);
+  background-image: url(../images/icon-check.svg);
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -202,15 +207,15 @@ background-image: url(../images/icon-check.svg);
   margin: 10px auto;
   margin-bottom: 0;
   border-radius: 10px;
-  border:none;
+  border: none;
   align-items: center;
   @include font(500, 20px, 1.157, 0.04em);
   color: $white-color;
   background-color: $purple-text-color;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-   transition: background-color $animation-time $animation-function;
+  transition: background-color $animation-time $animation-function;
 
   &:focus {
-    background-color:$hover-btn-one-color;
+    background-color: $hover-btn-one-color;
   }
 }
