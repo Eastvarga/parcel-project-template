@@ -26,7 +26,7 @@
   .modal {
 position: relative;
  width: 100%;   
-padding: 30px;
+padding: 40px;
  z-index: 100;
   border-radius: 14px;
   background: $bg-color;  
@@ -69,7 +69,7 @@ display: flex;
   margin-bottom: 10px;
   font-family: "Titan One";
     text-transform: uppercase;
-     @include font(700, 20px, 1.157, 0.04em);
+     @include font(500, 20px, 1.157, 0.04em);
     color: $accent-text-color;
 }
 
@@ -78,7 +78,7 @@ display: flex;
     margin-bottom: 10px;
     font-family: $accent-font;
     text-transform: uppercase;
-     @include font(700, 20px, 1.157, 0.04em);
+     @include font(500, 20px, 1.157, 0.04em);
     color: $accent-text-color;
   }
   &-field {
@@ -198,7 +198,7 @@ background-image: url(../images/icon-check.svg);
 /* -------Кнопка для формы в модальном окне----- */
 .btn--form {
   padding: 10px 55px;
-  margin: 0px auto;
+  margin: 10px auto;
   border-radius: 10px;
   border:none;
   align-items: center;
