@@ -181,4 +181,14 @@
     outline: none;
 }
 
+.upto-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+
+    &.hide {
+        display: none;
+    }
+}
+
 
