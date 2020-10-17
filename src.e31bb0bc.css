@@ -481,10 +481,13 @@ img {
     margin-right: 110px;
   }
 }
+.header-box {
+  position: relative;
+}
+
 .page-header {
   position: fixed;
   top: 0;
-  left: 0;
   padding-top: 6px;
   z-index: 500;
   background: transparent;
@@ -513,7 +516,7 @@ img {
     display: none;
     position: absolute;
     top: -6px;
-    right: 0;
+    right: -2px;
     width: 250px;
     height: 100vh;
     background: #e17992;
@@ -575,13 +578,12 @@ img {
   .page-header {
     padding-top: 37px;
     padding-bottom: 21px;
+    margin-left: -69px;
   }
 
   .container--pos-desctop {
     display: flex;
     align-items: center;
-    padding-left: 46px;
-    padding-right: 115px;
   }
 
   .menu-box {
@@ -1055,6 +1057,11 @@ img {
   }
 }
 
+.products__separator {
+  display: inline-block;
+  margin: 15px 0 32px 0;
+}
+
 .products__text {
   word-wrap: break-word;
   overflow: hidden;
@@ -1062,6 +1069,7 @@ img {
   -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
   font-family: "DM Sans", sans-serif;
+  margin: 0 0 30px 0;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.52;
@@ -1074,6 +1082,7 @@ img {
     font-size: 14px;
     line-height: 1.76;
     letter-spacing: 0.04em;
+    margin: 0 0 40px 0;
   }
 }
 @media (min-width: 1280px) {
@@ -1083,6 +1092,7 @@ img {
     line-height: 1.76;
     letter-spacing: 0.04em;
     -webkit-line-clamp: 4;
+    margin: 0 0 62px 0;
   }
 }
 
@@ -1775,9 +1785,9 @@ img {
   cursor: pointer;
 }
 
-hr {
+.hr {
+  display: block;
   margin: 0;
-  width: 100%;
   border: 1px solid #e1e1e1;
 }
 
@@ -1787,11 +1797,42 @@ footer {
   font-style: normal;
 }
 
+.footer__text-contacts {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .footer__text-contacts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 164px 0 90px;
+  }
+}
+@media (min-width: 1280px) {
+  .footer__text-contacts {
+    padding: 165px 0 97px;
+  }
+}
+
 .footer-box {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   overflow: hidden;
+}
+@media (min-width: 768px) {
+  .footer-box {
+    padding-top: 26px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1280px) {
+  .footer-box {
+    padding-top: 32px;
+  }
 }
 
 .footer-nav {
@@ -1856,10 +1897,14 @@ footer {
 
 .footer-text {
   display: block;
-  margin: 112px 66px 42px 20px;
   padding: 0;
   text-align: left;
   width: 234px;
+}
+@media screen and (max-width: 767px) {
+  .footer-text {
+    margin: 112px 0 42px 0;
+  }
 }
 .footer-text__title {
   margin-top: 0;
@@ -1871,13 +1916,17 @@ footer {
 
 .contacts {
   text-align: right;
-  margin: 42px 20px 42px;
+}
+@media screen and (max-width: 767px) {
+  .contacts {
+    margin: 0 0 42px;
+  }
 }
 
 .social-list {
   display: flex;
   justify-content: flex-end;
-  margin-bottom: 42px;
+  margin-bottom: 46px;
 }
 .social-list__link {
   background-color: #ffb8ca;
@@ -1925,25 +1974,25 @@ footer {
 }
 
 .copyright {
-  padding: 22px 90px 24px 78px;
+  padding: 22px 0 24px 0;
   text-align: center;
 }
 .copyright__text {
+  margin: 0 auto;
   font-family: "DM Sans";
-  font-style: normal;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 1.86;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.52;
+  letter-spacing: 0em;
   color: #907e82;
+}
+@media screen and (max-width: 767px) {
+  .copyright__text {
+    max-width: 145px;
+  }
 }
 
 @media (min-width: 768px) {
-  .footer-box {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
   .footer-nav {
     display: flex;
     justify-content: center;
@@ -1964,7 +2013,6 @@ footer {
 
   .footer-text {
     width: 340px;
-    margin: 164px 0 90px 36px;
   }
   .footer-text__title {
     margin-bottom: 16px;
@@ -1999,7 +2047,6 @@ footer {
 
   .contacts {
     text-align: right;
-    margin: 158px 36px 174px 92px;
   }
 
   .social-list {
@@ -2038,7 +2085,6 @@ footer {
 }
 @media (min-width: 1280px) {
   .footer-text {
-    margin: 165px 257px 97px 114px;
     width: 474px;
   }
   .footer-text__title {
@@ -2052,10 +2098,6 @@ footer {
     font-size: 56px;
     line-height: 1.14;
     letter-spacing: 0.06em;
-  }
-
-  .contacts {
-    margin: 164px 116px 98px 0;
   }
 
   .social-list {
