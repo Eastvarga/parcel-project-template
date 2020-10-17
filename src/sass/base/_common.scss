@@ -2,6 +2,9 @@ html {
   // медленная прокрутка якорей!!!!
   scroll-behavior: smooth;
 }
+body.modal-open {
+  overflow: hidden;
+}
 .body {
   font-style: normal;
 }
