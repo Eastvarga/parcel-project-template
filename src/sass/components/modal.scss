@@ -1,0 +1,184 @@
+.backdrop {
+ position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  z-index: 100;
+  transition: opacity $animation-time $animation-function;
+    @media screen and ( max-width: 768px) {
+     padding: 94px 15px;
+   }
+    @media screen and ( max-width: 1199px){
+      overflow-y: scroll;
+    }
+ }
+ .backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+& .modal {
+   transform: translateX(-50%, -50%) scale(0);
+ }
+}
+  .modal {
+position: relative;
+ width: 100%;   
+padding: 40px;
+ z-index: 100;
+  border-radius: 10px;
+  background: $bg-color;  
+   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+   @include for-size (tablet){
+    position: absolute;
+  top: 50%;
+ left: 50%;  transform: translate(-50%, -50%) scaleX(1);  
+    max-width:420px;
+    }
+
+ @include for-size (desktop){
+   max-width:528px;  height: auto;
+   }}
+    
+.bt-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+padding: 6px;
+display: flex;
+  align-items: center;
+  background: $white-color;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+   color: $hover-btn-one-color;
+  outline: none;
+  text-align: center;
+  transition: fill $animation-time $animation-function;
+  cursor: pointer;  &:hover,
+  &:focus {
+    fill: $accent-purple-color;
+  }}
+  .form {
+   text-align: center;
+ display: flex;
+  flex-direction: column;
+  &__caption {
+  display: block;
+  margin-bottom: 20px;
+   @include font(700, 20px, 1.157, 0.04em);
+    color: $hover-btn-one-color;
+}
+
+  &__title {
+    text-align: center;
+    margin-bottom: 20px;
+     @include font(700, 20px, 1.157, 0.04em);
+    color: $hover-btn-one-color;
+  }
+  &-field {
+    position: relative;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    outline: none;
+  }
+&__check-product {
+   position: relative;display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+ @include font(500, 16px, 1.8, 0.04em);}
+&__label {
+    display: flex;
+    align-items: left;
+  margin-left: 4px;
+    margin-bottom: 6px;
+     @include font(400, 16px, 1.2, 0.02em);
+    color: $black-color;
+  }
+&__input {
+    padding-left: 42px;
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all $animation-time $animation-function;
+    outline: none;
+  }
+  
+ &__icon {
+    position: absolute;
+    top: 54%;
+    left: 12px;
+    fill: $purple-text-color;
+    transition: fill $animation-time $animation-function;
+  }
+  &__input:focus ~ &__icon,
+  &__input:focus,
+  &__textarea:focus {
+    border-color: $accent-purple-color;
+    fill: $accent-purple-color;
+       }}
+/* ------------Стиль для чек бокса------------ */
+.chek {
+  display: inline-flex;
+  text-align: center;
+  margin-bottom: 10px;
+  color: $black-color;
+    @include for-size(desktop){
+    justify-content: center;
+    }
+}
+.checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+   overflow: hidden;
+}
+
+.chek__icon::before {
+  display: inline-flex;
+  text-align: center;
+  content: "";
+  margin-right: 10px;
+  width: 16px;
+  height: 15px;
+   background-image: url(../images/icon-check.svg);
+  fill:  $bg-color;
+  border: 2px solid $accent-text-color;
+  border-radius: 2px;
+
+  cursor: pointer;
+  transition: all $animation-time $animation-function;}
+
+.checkbox:checked ~ .chek__icon::before {
+ 
+  border: 2px solid $hover-btn-one-color;
+  border-radius: 2px;
+  background-color: $hover-btn-one-color;
+background-image: url(../images/icon-check.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+/* -------Кнопка для формы в модальном окне----- */
+.btn--form {
+  padding: 10px 55px;
+  margin: 0px auto;
+  border-radius: 4px;
+  border:none;
+  align-items: center;
+  @include font(500, 20px, 1.157, 0.04em);
+  color: $white-color;
+  background-color: $purple-text-color;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+   transition: background-color $animation-time $animation-function;
+
+  &:focus {
+    background-color:$hover-btn-one-color;
+  }
+}
