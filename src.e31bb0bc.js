@@ -189,11 +189,47 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./..\\fonts\\dm-sans-v5-latin-regular.eot":[["dm-sans-v5-latin-regular.81b5c59d.eot","fonts/dm-sans-v5-latin-regular.eot"],"fonts/dm-sans-v5-latin-regular.eot"],"./..\\fonts\\dm-sans-v5-latin-regular.woff2":[["dm-sans-v5-latin-regular.8d44908d.woff2","fonts/dm-sans-v5-latin-regular.woff2"],"fonts/dm-sans-v5-latin-regular.woff2"],"./..\\fonts\\dm-sans-v5-latin-regular.woff":[["dm-sans-v5-latin-regular.e5cf4a87.woff","fonts/dm-sans-v5-latin-regular.woff"],"fonts/dm-sans-v5-latin-regular.woff"],"./..\\fonts\\dm-sans-v5-latin-regular.ttf":[["dm-sans-v5-latin-regular.30b0dfbe.ttf","fonts/dm-sans-v5-latin-regular.ttf"],"fonts/dm-sans-v5-latin-regular.ttf"],"./..\\fonts\\dm-sans-v5-latin-regular.svg":[["dm-sans-v5-latin-regular.ead03e5e.svg","fonts/dm-sans-v5-latin-regular.svg"],"fonts/dm-sans-v5-latin-regular.svg"],"./..\\fonts\\dm-sans-v5-latin-500.eot":[["dm-sans-v5-latin-500.96e54c25.eot","fonts/dm-sans-v5-latin-500.eot"],"fonts/dm-sans-v5-latin-500.eot"],"./..\\fonts\\dm-sans-v5-latin-500.woff2":[["dm-sans-v5-latin-500.9524903e.woff2","fonts/dm-sans-v5-latin-500.woff2"],"fonts/dm-sans-v5-latin-500.woff2"],"./..\\fonts\\dm-sans-v5-latin-500.woff":[["dm-sans-v5-latin-500.170a9973.woff","fonts/dm-sans-v5-latin-500.woff"],"fonts/dm-sans-v5-latin-500.woff"],"./..\\fonts\\dm-sans-v5-latin-500.ttf":[["dm-sans-v5-latin-500.bed1da24.ttf","fonts/dm-sans-v5-latin-500.ttf"],"fonts/dm-sans-v5-latin-500.ttf"],"./..\\fonts\\dm-sans-v5-latin-500.svg":[["dm-sans-v5-latin-500.29a15e3c.svg","fonts/dm-sans-v5-latin-500.svg"],"fonts/dm-sans-v5-latin-500.svg"],"./..\\fonts\\dm-sans-v5-latin-700.eot":[["dm-sans-v5-latin-700.450b51d9.eot","fonts/dm-sans-v5-latin-700.eot"],"fonts/dm-sans-v5-latin-700.eot"],"./..\\fonts\\dm-sans-v5-latin-700.woff2":[["dm-sans-v5-latin-700.69b1af9a.woff2","fonts/dm-sans-v5-latin-700.woff2"],"fonts/dm-sans-v5-latin-700.woff2"],"./..\\fonts\\dm-sans-v5-latin-700.woff":[["dm-sans-v5-latin-700.ae5018c5.woff","fonts/dm-sans-v5-latin-700.woff"],"fonts/dm-sans-v5-latin-700.woff"],"./..\\fonts\\dm-sans-v5-latin-700.ttf":[["dm-sans-v5-latin-700.e007fc9a.ttf","fonts/dm-sans-v5-latin-700.ttf"],"fonts/dm-sans-v5-latin-700.ttf"],"./..\\fonts\\dm-sans-v5-latin-700.svg":[["dm-sans-v5-latin-700.9bd9af8d.svg","fonts/dm-sans-v5-latin-700.svg"],"fonts/dm-sans-v5-latin-700.svg"],"./..\\fonts\\titan-one-v8-latin-regular.eot":[["titan-one-v8-latin-regular.5ecfba8a.eot","fonts/titan-one-v8-latin-regular.eot"],"fonts/titan-one-v8-latin-regular.eot"],"./..\\fonts\\titan-one-v8-latin-regular.woff2":[["titan-one-v8-latin-regular.c7773417.woff2","fonts/titan-one-v8-latin-regular.woff2"],"fonts/titan-one-v8-latin-regular.woff2"],"./..\\fonts\\titan-one-v8-latin-regular.woff":[["titan-one-v8-latin-regular.7f3e05d4.woff","fonts/titan-one-v8-latin-regular.woff"],"fonts/titan-one-v8-latin-regular.woff"],"./..\\fonts\\titan-one-v8-latin-regular.ttf":[["titan-one-v8-latin-regular.289eb43c.ttf","fonts/titan-one-v8-latin-regular.ttf"],"fonts/titan-one-v8-latin-regular.ttf"],"./..\\fonts\\titan-one-v8-latin-regular.svg":[["titan-one-v8-latin-regular.6dce54aa.svg","fonts/titan-one-v8-latin-regular.svg"],"fonts/titan-one-v8-latin-regular.svg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
+},{"./..\\fonts\\dm-sans-v5-latin-regular.eot":[["dm-sans-v5-latin-regular.81b5c59d.eot","fonts/dm-sans-v5-latin-regular.eot"],"fonts/dm-sans-v5-latin-regular.eot"],"./..\\fonts\\dm-sans-v5-latin-regular.woff2":[["dm-sans-v5-latin-regular.8d44908d.woff2","fonts/dm-sans-v5-latin-regular.woff2"],"fonts/dm-sans-v5-latin-regular.woff2"],"./..\\fonts\\dm-sans-v5-latin-regular.woff":[["dm-sans-v5-latin-regular.e5cf4a87.woff","fonts/dm-sans-v5-latin-regular.woff"],"fonts/dm-sans-v5-latin-regular.woff"],"./..\\fonts\\dm-sans-v5-latin-regular.ttf":[["dm-sans-v5-latin-regular.30b0dfbe.ttf","fonts/dm-sans-v5-latin-regular.ttf"],"fonts/dm-sans-v5-latin-regular.ttf"],"./..\\fonts\\dm-sans-v5-latin-regular.svg":[["dm-sans-v5-latin-regular.ead03e5e.svg","fonts/dm-sans-v5-latin-regular.svg"],"fonts/dm-sans-v5-latin-regular.svg"],"./..\\fonts\\dm-sans-v5-latin-500.eot":[["dm-sans-v5-latin-500.96e54c25.eot","fonts/dm-sans-v5-latin-500.eot"],"fonts/dm-sans-v5-latin-500.eot"],"./..\\fonts\\dm-sans-v5-latin-500.woff2":[["dm-sans-v5-latin-500.9524903e.woff2","fonts/dm-sans-v5-latin-500.woff2"],"fonts/dm-sans-v5-latin-500.woff2"],"./..\\fonts\\dm-sans-v5-latin-500.woff":[["dm-sans-v5-latin-500.170a9973.woff","fonts/dm-sans-v5-latin-500.woff"],"fonts/dm-sans-v5-latin-500.woff"],"./..\\fonts\\dm-sans-v5-latin-500.ttf":[["dm-sans-v5-latin-500.bed1da24.ttf","fonts/dm-sans-v5-latin-500.ttf"],"fonts/dm-sans-v5-latin-500.ttf"],"./..\\fonts\\dm-sans-v5-latin-500.svg":[["dm-sans-v5-latin-500.29a15e3c.svg","fonts/dm-sans-v5-latin-500.svg"],"fonts/dm-sans-v5-latin-500.svg"],"./..\\fonts\\dm-sans-v5-latin-700.eot":[["dm-sans-v5-latin-700.450b51d9.eot","fonts/dm-sans-v5-latin-700.eot"],"fonts/dm-sans-v5-latin-700.eot"],"./..\\fonts\\dm-sans-v5-latin-700.woff2":[["dm-sans-v5-latin-700.69b1af9a.woff2","fonts/dm-sans-v5-latin-700.woff2"],"fonts/dm-sans-v5-latin-700.woff2"],"./..\\fonts\\dm-sans-v5-latin-700.woff":[["dm-sans-v5-latin-700.ae5018c5.woff","fonts/dm-sans-v5-latin-700.woff"],"fonts/dm-sans-v5-latin-700.woff"],"./..\\fonts\\dm-sans-v5-latin-700.ttf":[["dm-sans-v5-latin-700.e007fc9a.ttf","fonts/dm-sans-v5-latin-700.ttf"],"fonts/dm-sans-v5-latin-700.ttf"],"./..\\fonts\\dm-sans-v5-latin-700.svg":[["dm-sans-v5-latin-700.9bd9af8d.svg","fonts/dm-sans-v5-latin-700.svg"],"fonts/dm-sans-v5-latin-700.svg"],"./..\\fonts\\titan-one-v8-latin-regular.eot":[["titan-one-v8-latin-regular.5ecfba8a.eot","fonts/titan-one-v8-latin-regular.eot"],"fonts/titan-one-v8-latin-regular.eot"],"./..\\fonts\\titan-one-v8-latin-regular.woff2":[["titan-one-v8-latin-regular.c7773417.woff2","fonts/titan-one-v8-latin-regular.woff2"],"fonts/titan-one-v8-latin-regular.woff2"],"./..\\fonts\\titan-one-v8-latin-regular.woff":[["titan-one-v8-latin-regular.7f3e05d4.woff","fonts/titan-one-v8-latin-regular.woff"],"fonts/titan-one-v8-latin-regular.woff"],"./..\\fonts\\titan-one-v8-latin-regular.ttf":[["titan-one-v8-latin-regular.289eb43c.ttf","fonts/titan-one-v8-latin-regular.ttf"],"fonts/titan-one-v8-latin-regular.ttf"],"./..\\fonts\\titan-one-v8-latin-regular.svg":[["titan-one-v8-latin-regular.6dce54aa.svg","fonts/titan-one-v8-latin-regular.svg"],"fonts/titan-one-v8-latin-regular.svg"],"./..\\images\\mobile\\hero-ice-cream.png":[["hero-ice-cream.a8a6a05a.png","images/mobile/hero-ice-cream.png"],"images/mobile/hero-ice-cream.png"],"./..\\images\\mobile\\hero-ice-cream@2x.png":[["hero-ice-cream@2x.67b243f5.png","images/mobile/hero-ice-cream@2x.png"],"images/mobile/hero-ice-cream@2x.png"],"./..\\images\\tablet\\hero-ice-cream.png":[["hero-ice-cream.246b5e2c.png","images/tablet/hero-ice-cream.png"],"images/tablet/hero-ice-cream.png"],"./..\\images\\tablet\\hero-ice-cream@2x.png":[["hero-ice-cream@2x.41ad37df.png","images/tablet/hero-ice-cream@2x.png"],"images/tablet/hero-ice-cream@2x.png"],"./..\\images\\desktop\\hero-ice-cream.png":[["hero-ice-cream.b15fabcc.png","images/desktop/hero-ice-cream.png"],"images/desktop/hero-ice-cream.png"],"./..\\images\\desktop\\hero-ice-cream@2x.png":[["hero-ice-cream@2x.595d2002.png","images/desktop/hero-ice-cream@2x.png"],"images/desktop/hero-ice-cream@2x.png"],"./..\\images\\tablet\\hero-arrow-right.png":[["hero-arrow-right.e54744e3.png","images/tablet/hero-arrow-right.png"],"images/tablet/hero-arrow-right.png"],"./..\\images\\tablet\\hero-arrow-right@2x.png":[["hero-arrow-right@2x.e0680fc4.png","images/tablet/hero-arrow-right@2x.png"],"images/tablet/hero-arrow-right@2x.png"],"./..\\images\\desktop\\hero-arrow-right.png":[["hero-arrow-right.640a02f3.png","images/desktop/hero-arrow-right.png"],"images/desktop/hero-arrow-right.png"],"./..\\images\\desktop\\hero-arrow-right@2x.png":[["hero-arrow-right@2x.22973a22.png","images/desktop/hero-arrow-right@2x.png"],"images/desktop/hero-arrow-right@2x.png"],"./..\\images\\desktop-milk@1x.png":[["desktop-milk@1x.4c2d1329.png","images/desktop-milk@1x.png"],"images/desktop-milk@1x.png"],"./..\\images\\desktop-milk@2x.png":[["desktop-milk@2x.eace9d99.png","images/desktop-milk@2x.png"],"images/desktop-milk@2x.png"],"./..\\images\\red-arrow@1x.png":[["red-arrow@1x.98d821d3.png","images/red-arrow@1x.png"],"images/red-arrow@1x.png"],"./..\\images\\red-arrow@2x.png":[["red-arrow@2x.030bbe4a.png","images/red-arrow@2x.png"],"images/red-arrow@2x.png"],"./..\\images\\desktop\\bcgbranch2.png":[["bcgbranch2.befbd5e2.png","images/desktop/bcgbranch2.png"],"images/desktop/bcgbranch2.png"],"./..\\images\\desktop\\bcgbranch2@2x.png":[["bcgbranch2@2x.7ad949e2.png","images/desktop/bcgbranch2@2x.png"],"images/desktop/bcgbranch2@2x.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"js/slide.js":[function(require,module,exports) {
+;
+
+(function slide() {
+  var buttons = document.querySelectorAll('.slide-button');
+  var feedbacks = document.querySelectorAll('.feedback-text-wrapper');
+  var authors = document.querySelectorAll('.feedback-author');
+  var avatars = document.querySelectorAll('.feedback-avatar');
+
+  var _loop = function _loop(i) {
+    buttons[i].addEventListener('click', function (e) {
+      var currentButton = document.querySelector('.is-clicked');
+      var currentFeedback = document.querySelector('.current-feedback');
+      var currentAuthor = document.querySelector('.current-author');
+      var currentAvatar = document.querySelector('.current-avatar');
+      currentFeedback.classList.remove("current-feedback");
+      feedbacks[i].classList.add("current-feedback");
+      currentAuthor.classList.remove("current-author");
+      authors[i].classList.add("current-author");
+      currentAvatar.classList.remove("current-avatar");
+      avatars[i].classList.add("current-avatar");
+      currentButton.classList.remove('is-clicked');
+      buttons[i].classList.add('is-clicked'); // for (let j = 0; j < buttons.length; j++) {
+      //    if(j !== i) {
+      //         buttons[j].classList.remove('is-clicked')
+      //    }
+      // }
+    });
+  };
+
+  for (var i = 0; i < buttons.length; i++) {
+    _loop(i);
+  }
+})();
+},{}],"index.js":[function(require,module,exports) {
 "use strict";
 
 require("./sass/main.scss");
-},{"./sass/main.scss":"sass/main.scss"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+
+require("./js/slide");
+},{"./sass/main.scss":"sass/main.scss","./js/slide":"js/slide.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -221,7 +257,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49763" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50688" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
