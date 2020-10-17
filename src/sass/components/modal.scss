@@ -6,7 +6,7 @@
   height: 100%;
   background: rgba(0, 0, 0, 0.2);
   opacity: 1;
-  z-index: 100;
+  z-index: 9000;
   transition: opacity $animation-time $animation-function;
     @media screen and ( max-width: 768px) {
      padding: 94px 15px;
@@ -17,14 +17,14 @@
  }
  .backdrop.is-hidden {
   opacity: 0;
-  pointer-events: none;
-& .modal {
-   transform: translateX(-50%, -50%) scale(0);
- }
-}
+  pointer-events: none;}
+// & .modal {
+//    transform: translateX(-50%, -50%) scale(0);
+//  }
+// }
   .modal {
 position: relative;
- width: 100%;   
+ width: 100vw;   
 padding: 40px;
  z-index: 100;
   border-radius: 10px;
@@ -67,15 +67,19 @@ display: flex;
   &__caption {
   display: block;
   margin-bottom: 20px;
-   @include font(700, 20px, 1.157, 0.04em);
-    color: $hover-btn-one-color;
+   font-family: $accent-font;
+    text-transform: uppercase;
+     @include font(400, 20px, 1.157, 0.04em);
+    color: $accent-text-color;
 }
 
   &__title {
     text-align: center;
     margin-bottom: 20px;
-     @include font(700, 20px, 1.157, 0.04em);
-    color: $hover-btn-one-color;
+    font-family: $accent-font;
+    text-transform: uppercase;
+     @include font(400, 20px, 1.157, 0.04em);
+    color: $accent-text-color;
   }
   &-field {
     position: relative;
