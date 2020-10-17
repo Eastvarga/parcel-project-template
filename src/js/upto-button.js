@@ -11,8 +11,6 @@
                 uptoButton.classList.remove('hide')
 
             }
-           
-           
 
         })
     }
