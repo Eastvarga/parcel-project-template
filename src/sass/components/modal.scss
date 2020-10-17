@@ -24,18 +24,18 @@
 // }
   .modal {
 position: relative;
- width: 100vw;   
+ width: 100%;   
 padding: 40px;
  z-index: 100;
-  border-radius: 10px;
+  border-radius: 14px;
   background: $bg-color;  
    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
    @include for-size (tablet){
     position: absolute;
-  top: 50%;
+  top: 60%;
  left: 50%;  transform: translate(-50%, -50%) scaleX(1);  
-    max-width:420px;
+  width: 75vw;
     }
 
  @include for-size (desktop){
@@ -52,7 +52,6 @@ display: flex;
   background: $white-color;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-   color: $hover-btn-one-color;
   outline: none;
   text-align: center;
   transition: fill $animation-time $animation-function;
@@ -67,7 +66,7 @@ display: flex;
   &__caption {
   display: block;
   margin-bottom: 20px;
-   font-family: $accent-font;
+  font-family: "Titan One";
     text-transform: uppercase;
      @include font(400, 20px, 1.157, 0.04em);
     color: $accent-text-color;
@@ -110,12 +109,26 @@ display: flex;
     transition: all $animation-time $animation-function;
     outline: none;
   }
-  
+    &__textarea {
+    width: 100%;
+    padding: 12px 16px;
+    resize: none;
+    margin-bottom: 20px;
+    border: 1px solid rgba(206, 129, 199, 0.2);
+
+    border-radius: 4px;
+    transition: border-color $animation-time $animation-function ;
+    outline: none;
+  }
+  &__textarea::placeholder {
+
+    color:$accent-text-color;
+  }
  &__icon {
     position: absolute;
     top: 54%;
     left: 12px;
-    fill: $purple-text-color;
+    fill: $accent-text-color;
     transition: fill $animation-time $animation-function;
   }
   &__input:focus ~ &__icon,
@@ -129,11 +142,32 @@ display: flex;
   display: inline-flex;
   text-align: center;
   margin-bottom: 10px;
-  color: $black-color;
+  font-family: "Titan One";
+  color: $menu-bg;
     @include for-size(desktop){
     justify-content: center;
     }
+  &__icon::before {
+  display: inline-flex;
+  text-align: center;
+  content: "";
+ margin-right: 10px;
+  width: 16px;
+  height: 15px;
+   background-image: url(../images/icon-check.svg);
+   font-family: "Titan One";
+  fill:  $bg-color;
+  border: 2px solid $accent-text-color;
+  border-radius: 2px;
+
+  cursor: pointer;
+  transition: all $animation-time $animation-function;}
 }
+ .agreement{
+     font-family: $base-font;
+
+ }
+
 .checkbox {
   position: absolute;
   width: 1px;
@@ -145,20 +179,7 @@ display: flex;
    overflow: hidden;
 }
 
-.chek__icon::before {
-  display: inline-flex;
-  text-align: center;
-  content: "";
-  margin-right: 10px;
-  width: 16px;
-  height: 15px;
-   background-image: url(../images/icon-check.svg);
-  fill:  $bg-color;
-  border: 2px solid $accent-text-color;
-  border-radius: 2px;
 
-  cursor: pointer;
-  transition: all $animation-time $animation-function;}
 
 .checkbox:checked ~ .chek__icon::before {
  
