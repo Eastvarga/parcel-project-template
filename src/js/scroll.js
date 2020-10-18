@@ -1,10 +1,11 @@
-$(document).ready(function () {
-  $(window).scroll(function () {
-    if ($(window).scrollTop() > 350) {
-      $('.page-header').css('background', '#ffb8ca');
-    }
-    if ($(window).scrollTop() < 350) {
-      $('.page-header').css('background', 'transparent');
+document.addEventListener('DOMContentLoaded', function () {
+  window.addEventListener('scroll', function (e) {
+    if (window.scrollY > 679) {
+      document.getElementsByClassName('page-header')[0].style.background =
+        '#FFB8CA';
+    } else {
+      document.getElementsByClassName('page-header')[0].style.background =
+        'transparent';
     }
   });
 });
