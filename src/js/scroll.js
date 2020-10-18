@@ -1,10 +1,10 @@
 $(document).ready(function () {
   $(window).scroll(function () {
-    if ($(window).scrollTop() > 679) {
-      $('.navigation__link').css('color', '#D41443');
+    if ($(window).scrollTop() > 350) {
+      $('.page-header').css('background', '#ffb8ca');
     }
-    if ($(window).scrollTop() < 679) {
-      $('.navigation__link').css('color', 'white');
+    if ($(window).scrollTop() < 350) {
+      $('.page-header').css('background', 'transparent');
     }
   });
 });
