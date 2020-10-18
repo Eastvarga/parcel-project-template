@@ -75,16 +75,17 @@
     font-family: 'Titan One';
     text-transform: uppercase;
     @include font(500, 20px, 1.157, 0.04em);
-    color: $accent-text-color;
+    color: $hover-btn-one-color;
   }
 
   &__title {
     text-align: center;
     margin-bottom: 10px;
-    font-family: $accent-font;
+    font-family: $hover-btn-one-color;
+    font-family: 'Titan One';
     text-transform: uppercase;
     @include font(500, 20px, 1.157, 0.04em);
-    color: $accent-text-color;
+    color: $hover-btn-one-color;
   }
   &-field {
     position: relative;
@@ -156,7 +157,7 @@
     margin-bottom: 10px;
   }
   font-family: 'Titan One';
-  color: $menu-bg;
+  color: $accent-text-color;
   @include for-size(desktop) {
     justify-content: center;
   }
@@ -211,7 +212,7 @@
   align-items: center;
   @include font(500, 20px, 1.157, 0.04em);
   color: $white-color;
-  background-color: $purple-text-color;
+  background-color: $menu-bg;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   transition: background-color $animation-time $animation-function;
 
