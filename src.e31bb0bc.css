@@ -2224,18 +2224,19 @@ footer {
   font-size: 20px;
   line-height: 1.157;
   letter-spacing: 0.04em;
-  color: #907e82;
+  color: #c7133e;
 }
 .form__title {
   text-align: center;
   margin-bottom: 10px;
+  font-family: #c7133e;
   font-family: "Titan One";
   text-transform: uppercase;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.157;
   letter-spacing: 0.04em;
-  color: #907e82;
+  color: #c7133e;
 }
 .form-field {
   position: relative;
@@ -2307,7 +2308,7 @@ footer {
   display: inline-flex;
   text-align: center;
   font-family: "Titan One";
-  color: #e17992;
+  color: #907e82;
 }
 .chek:not(:last-child) {
   margin-bottom: 10px;
@@ -2371,7 +2372,7 @@ footer {
   line-height: 1.157;
   letter-spacing: 0.04em;
   color: #ffffff;
-  background-color: #d41443;
+  background-color: #e17992;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
