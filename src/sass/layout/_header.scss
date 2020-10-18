@@ -94,7 +94,12 @@
   .page-header {
     padding-top: 37px;
     padding-bottom: 21px;
-    margin-left: -69px;
+    margin-left: 0;
+  }
+
+  .container-fix {
+    padding-right: 0;
+    padding-left: 46px;
   }
 
   .container--pos-desctop {
