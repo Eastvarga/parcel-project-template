@@ -519,9 +519,9 @@ img {
   .menu-box {
     display: none;
     position: absolute;
-    top: -6px;
-    right: -2px;
-    width: 250px;
+    top: 0px;
+    left: 50px;
+    right: -20px;
     height: 100vh;
     background: #e17992;
   }
@@ -563,6 +563,8 @@ img {
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .menu-box {
     top: -37px;
+    left: 480px;
+    right: -34px;
     height: 100vh;
   }
 }
